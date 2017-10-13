@@ -79,3 +79,10 @@ media_id = MediaType.find_by(name: "MPEG audio file")
 electronica_genre_id = Genre.find_by(name: "Electronica/Dance")
 # 15
 Track.where(media_type_id: media_id, genre_id: electronica_genre_id)
+
+
+Stretch 1: Find all the albums whose titles start with B.
+Album.where("title ILIKE ?", "B%")
+
+Stretch 2: Find the all the artists whose names start with A.
+Artist.where("name ILIKE ?", "A%")
